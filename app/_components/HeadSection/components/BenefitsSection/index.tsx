@@ -2,6 +2,7 @@ import React from "react";
 import { BiSupport } from "react-icons/bi";
 import { BsBoxSeam } from "react-icons/bs";
 import { CgCornerDownLeft, CgDesktop } from "react-icons/cg";
+import SliderItems from "./components/SliderBenefits";
 const BenefitsItem = ({
   title,
   description,
@@ -12,7 +13,7 @@ const BenefitsItem = ({
   icon: React.ReactNode;
 }) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex min-w-80 items-center gap-3">
       <div className="border-2 flex items-center justify-center rounded-full w-16 h-16 border-slate-200">
         {icon}
       </div>
@@ -23,6 +24,7 @@ const BenefitsItem = ({
     </div>
   );
 };
+
 const BenefitsSection = () => {
   const listBenefits = [
     {
@@ -46,9 +48,10 @@ const BenefitsSection = () => {
       description: "Outstanding premium support",
     },
   ];
+
   return (
-    <div className="bg-white">
-      <div className="m-auto py-3 flex flex-wrap md:flex-nowrap justify-center md:justify-between sm:gap-5 md:gap-0 md:w-[80%] w-full">
+    <div className="bg-white border border-slate-400">
+      <div className="m-auto hidden py-3 md:flex flex-wrap justify-center md:justify-between sm:gap-5 md:gap-0 md:w-[80%] w-full">
         {listBenefits.map((item, index) => (
           <BenefitsItem
             key={index}
@@ -58,6 +61,7 @@ const BenefitsSection = () => {
           />
         ))}
       </div>
+      <SliderItems />
     </div>
   );
 };
