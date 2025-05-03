@@ -5,8 +5,6 @@ export default function ItemBenefits({
   title,
   description,
 }: ListBenefits) {
-  console.log("This is a server component - should show (server)");
-
   return (
     <>
       <div className="border-2 flex items-center justify-center rounded-full w-16 h-16 border-slate-200">

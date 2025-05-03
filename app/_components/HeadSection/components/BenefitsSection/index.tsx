@@ -1,8 +1,6 @@
 import React from "react";
-import { BiSupport } from "react-icons/bi";
-import { BsBoxSeam } from "react-icons/bs";
-import { CgCornerDownLeft, CgDesktop } from "react-icons/cg";
 import SliderItems from "./components/SliderBenefits";
+import { listBenefits } from "./data";
 const BenefitsItem = ({
   title,
   description,
@@ -26,32 +24,9 @@ const BenefitsItem = ({
 };
 
 const BenefitsSection = () => {
-  const listBenefits = [
-    {
-      title: "Free Shipping",
-      icon: <BsBoxSeam color="#000" size={30} />,
-      description: "You will love at great low prices",
-    },
-    {
-      title: "Flexible Payment",
-      icon: <CgDesktop color="#000" size={30} />,
-      description: "Pay with Multiple Credit Cards",
-    },
-    {
-      title: "14 Day Returns",
-      icon: <CgCornerDownLeft color="#000" size={30} />,
-      description: "Within 30 days for an exchange",
-    },
-    {
-      title: "Premium Support",
-      icon: <BiSupport color="#000" size={30} />,
-      description: "Outstanding premium support",
-    },
-  ];
-
   return (
     <div className="bg-white border border-slate-400">
-      <div className="m-auto hidden py-3 md:flex flex-wrap justify-center md:justify-between sm:gap-5 md:gap-0 md:w-[80%] w-full">
+      <div className="m-auto hidden py-8 md:flex flex-wrap justify-center sm:gap-5 md:gap-2 md:justify-center md:w-[95%] w-full">
         {listBenefits.map((item, index) => (
           <BenefitsItem
             key={index}

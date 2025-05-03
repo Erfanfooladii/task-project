@@ -8,7 +8,7 @@ const HeadSection = () => {
   return (
     <div className="flex flex-col">
       <section
-        className="md:h-[85vh] w-full py-16 overflow-x-scroll md:overflow-x-hidden scrollbar-hide flex"
+        className="md:h-[95vh] w-full py-16 overflow-x-scroll md:overflow-x-hidden scrollbar-hide flex"
         style={{
           backgroundImage: `url(${ImageHead.src})`,
           backgroundSize: "cover",
@@ -16,7 +16,7 @@ const HeadSection = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className=" relative md:w-[80%] inline-flex md:flex md:items-center gap-8  px-5 md:m-auto">
+        <div className=" relative md:w-[95%] inline-flex md:flex md:items-center gap-8  md:m-auto">
           <ItemLink title="Popular." src={ImageKeyBord.src} />
           <ItemLink title="Best Seller" src={ImageMouse.src} />
         </div>
