@@ -1,0 +1,147 @@
+.swiper-popular {
+  width: 100%;
+  max-height: 340px;
+  padding-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.swiper-popular .swiper-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.swiper-slide-popular {
+  width: 33%;
+  min-width: 250px;
+  max-width: 300px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.swiper-slide-popular img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  display: none;
+  justify-content: center;
+  gap: 5px;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e2e2e2;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination-bullet .dot {
+  width: 5px !important;
+  height: 5px !important;
+}
+.swiper-pagination-bullet-active {
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  transition: ease-in-out;
+  transition-duration: 200ms;
+}
+.popular_btn-container {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+.image_frame:hover .popular_btn-container {
+  display: flex;
+  animation: float 500ms ease-in-out alternate;
+  bottom: 4px;
+}
+.popular_btn-container {
+  position: relative;
+}
+@keyframes float {
+  from {
+    bottom: 10px;
+  }
+  to {
+    bottom: 12px;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+  background: #00000080;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.3sease-in-out;
+  display: flex;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+}
+.relative:hover > .swiper-button-prev {
+  opacity: 1;
+  left: 25px;
+}
+.relative:hover > .swiper-button-next {
+  opacity: 1;
+  right: 25px;
+}
+._popular {
+  color: #00000080 !important;
+  background-color: #fff !important;
+}
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.swiper-button-prev {
+  left: 10px;
+  transition: all 300ms;
+}
+
+.swiper-button-next {
+  right: 10px;
+  transition: all 300ms;
+}
+
+@media screen and (max-width: 800px) {
+  .swiper-popular {
+    padding-bottom: 40px;
+    height: 340px;
+  }
+  .swiper-popular .swiper-wrapper {
+    gap: 10px;
+  }
+  .swiper-pagination {
+    display: flex;
+  }
+  .popular_btn-icon {
+    display: none;
+  }
+  .popular_btn-icon:first-child {
+    display: block;
+  }
+  .popular_btn-icon:last-child {
+    display: block;
+  }
+  .popular_btn-container {
+    bottom: 10;
+  }
+}

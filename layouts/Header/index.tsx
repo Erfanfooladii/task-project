@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="flex flex-col">
       <div className="bg-[rgb(35,37,46)] border-b border-slate-600">
-        <div className="w-full px-4 md:w-[80%] justify-between md:m-auto flex md:justify-between items-center py-3 md:py-6">
+        <div className="w-full px-3 md:p-0 md:w-[95%] justify-between md:m-auto flex md:justify-between items-center py-3 md:py-6">
           <div className="w-20 md:hidden">
             <ButtonMenu />
           </div>
@@ -30,7 +30,7 @@ export default function Header() {
         </div>
       </div>
       <div className="bg-[rgb(35,37,46)] w-full py-3 hidden md:block">
-        <div className="flex justify-between md:w-[80%] md:m-auto">
+        <div className="flex justify-between md:w-[95%] md:m-auto">
           <div className="flex gap-10">
             <DropdownCategories />
             <ListBottomHeader />
