@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    command: pnpm dev
+    stdin_open: true
+    tty: true
